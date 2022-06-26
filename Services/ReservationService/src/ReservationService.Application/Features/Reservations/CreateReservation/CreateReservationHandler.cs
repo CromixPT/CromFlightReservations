@@ -19,11 +19,9 @@ public class CreateReservationHandler : IRequestHandler<ReservationRequest, int>
 
     public async Task<int> Handle(ReservationRequest request, CancellationToken cancellationToken)
     {
-        if (string.IsNullOrWhiteSpace(request.DepartureCity))
-            throw new ArgumentException("Invalid Parameter Departure City");
+        // if (string.IsNullOrWhiteSpace(request.DepartureCity))
+        //     throw new ArgumentException("Invalid Parameter Departure City");
 
-        //throw new NotImplementedException();
-        Coount++;
         return await Task.FromResult(Coount);
     }
 }
