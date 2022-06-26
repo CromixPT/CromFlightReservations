@@ -1,4 +1,4 @@
-name: dotnet package
+name: Reservation Service Flow
 
 on: [push]
 
@@ -16,8 +16,8 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore .\Services\ReservationService\ReservationService.sln
       - name: Build
-        run: dotnet build  --configuration Release --no-restore
+        run: dotnet build .\Services\ReservationService\ReservationService.sln --configuration Release --no-restore
       - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: dotnet test .\Services\ReservationService\ReservationService.sln --no-restore --verbosity normal
