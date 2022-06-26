@@ -16,8 +16,8 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
-        run: dotnet restore .\Services\ReservationService\ReservationService.sln
+        run: dotnet restore ./Services/ReservationService
       - name: Build
-        run: dotnet build .\Services\ReservationService\ReservationService.sln --configuration Release --no-restore
+        run: dotnet build ./Services/ReservationService/ReservationService.sln --configuration Release --no-restore
       - name: Test
-        run: dotnet test .\Services\ReservationService\ReservationService.sln --no-restore --verbosity normal
+        run: dotnet test ./Services/ReservationService/ReservationService.sln --no-restore --verbosity normal
