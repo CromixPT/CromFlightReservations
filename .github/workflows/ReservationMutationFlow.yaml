@@ -15,4 +15,4 @@ jobs:
       - name: Install dependencies
         run: dotnet restore ./Services/ReservationService
       - name: Run Mutations
-        run: cd tests/ReservationService.Application.UnitTests && dotnet stryker
+        run: cd ./Services/ReservationService/tests/ReservationService.Application.UnitTests/ && dotnet stryker
