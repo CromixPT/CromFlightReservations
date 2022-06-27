@@ -13,6 +13,6 @@ jobs:
         with:
           dotnet-version: "6.0.x"
       - name: Install dependencies
-        run: dotnet restore ./Services/ReservationService
+        run: dotnet tool restore --tool-manifest ./Services/ReservationService/.config/dotnet-tools.json
       - name: Run Mutations
         run: cd ./Services/ReservationService/tests/ReservationService.Application.UnitTests/ && dotnet stryker
