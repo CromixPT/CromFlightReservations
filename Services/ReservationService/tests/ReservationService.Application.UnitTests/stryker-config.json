@@ -1,0 +1,13 @@
+{
+    "stryker-config":
+    {
+        "reporters": [
+            "progress",
+            "html"
+        ],
+        "solution": "../../ReservationService.sln",
+        "project": "ReservationService.Application.csproj",
+        "concurrency": 4,
+        "mutation-level": "Standard"
+    }
+}
