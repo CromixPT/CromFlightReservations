@@ -1,4 +1,4 @@
-name: Reservation Service Flow
+name: Reservation Service Mutation Flow
 
 on: [push]
 
