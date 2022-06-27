@@ -12,7 +12,9 @@ jobs:
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: "6.0.x"
-      - name: Install dependencies
+      - name: Instal solution dependencies
+        run: dotnet restore ./Services/ReservationService
+      - name: Install tool dependencies
         run: dotnet tool restore --tool-manifest ./Services/ReservationService/.config/dotnet-tools.json
       - name: Run Mutations
         env:
