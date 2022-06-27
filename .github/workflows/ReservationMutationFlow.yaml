@@ -15,4 +15,7 @@ jobs:
       - name: Install dependencies
         run: dotnet tool restore --tool-manifest ./Services/ReservationService/.config/dotnet-tools.json
       - name: Run Mutations
+        env:
+          STRYKER_DASHBOARD_API_KEY: ${{secrets.STRYKER_DASHBOARD_API_KEY }}
+
         run: cd ./Services/ReservationService/tests/ReservationService.Application.UnitTests/ && dotnet stryker
