@@ -3,11 +3,14 @@
     {
         "reporters": [
             "progress",
-            "html"
+            "html",
+            "dashboard"
         ],
         "solution": "../../ReservationService.sln",
         "project": "ReservationService.Application.csproj",
         "concurrency": 4,
-        "mutation-level": "Standard"
+        "mutation-level": "Standard",
+        "project-info": { "name": "github.com/CromixPT/CromFlightReservations","version": "main" },
+        "dashboard-url": "https://dev-dashboard.stryker-mutator.io"
     }
 }
